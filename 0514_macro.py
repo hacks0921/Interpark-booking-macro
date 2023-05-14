@@ -119,7 +119,7 @@ def long_running_task(): # thread 처리
                 # "닫기" 팝업 화면 닫기
                 browser.switch_to.window(browser.window_handles[1])  # 팝업 화면으로 이동
                 browser.find_element(By.CSS_SELECTOR, ".btn02").click() # "닫기" 버튼 나오면 클릭
-                time.sleep(2)
+                time.sleep(1)
 
                 # 01_기간/위치선택 (일자 -> 숙박 기간 -> 구역, 카라반/텐트 - 다음 단계 클릭)\
                 # 01-1 일자
@@ -268,7 +268,8 @@ def main():
     label_booking_seat.configure(foreground="green")
 
     # Load the image
-    image_path = "C:\\\\Code\\공릉캠핑장.png"
+    # image_path = "C:\\\\Code\\공릉캠핑장.png"
+    image_path = ".\\CampingSiteArea.png"
     image = Image.open(image_path)
     #image = image.resize((600, 300), Image.ANTIALIAS)  # Adjust the size as per your requirement
     image = image.resize((600, 300), resample=Image.LANCZOS)  # Adjust the size and resampling method as per your requirement
